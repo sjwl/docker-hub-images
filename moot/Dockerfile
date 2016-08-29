@@ -78,5 +78,4 @@ RUN set -x \
         && yum clean all \
         && rm -rf /var/cache/yum/*
 
-COPY docker-entrypoint.sh /usr/local/bin/
 CMD ["sh"]
