@@ -78,4 +78,5 @@ RUN set -x \
         && yum clean all \
         && rm -rf /var/cache/yum/*
 
+VOLUME /var/run/docker.sock:/var/run/docker.sock
 CMD ["sh"]
