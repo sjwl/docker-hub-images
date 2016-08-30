@@ -63,6 +63,7 @@ RUN set -x \
 	&& docker -v 
 
 # install chefdk
+ENV LANG=en_US.UTF-8
 RUN curl -L https://www.opscode.com/chef/install.sh | bash -s -- -P chefdk
 
 # install kitchen-docker
