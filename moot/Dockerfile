@@ -12,7 +12,6 @@ RUN yum install -y \
       curl \
       ca-certificates \
       openssl \
-      ruby \
       wget && \
     yum clean all && rm -rf /var/cache/yum/*
 
@@ -67,7 +66,7 @@ RUN set -x \
 RUN curl -L https://www.opscode.com/chef/install.sh | bash -s -- -P chefdk
 
 # install kitchen-docker
-RUN gem install kitchen-docker
+RUN chef gem install kitchen-docker
 
 # cleanup
 RUN set -x \
