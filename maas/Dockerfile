@@ -7,6 +7,6 @@ RUN apt-get -qq update && \
     systemctl enable rsyslog && \
     service rsyslog restart && \
     apt-get install -y maas && \
-    maas createadmin --username=root --password=welcome1 --email=samlee@ea.com
+    maas createadmin --username=root --password=welcome1 --email=foo@foo.com
 
 CMD ["/sbin/init"]
