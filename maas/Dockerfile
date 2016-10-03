@@ -6,8 +6,9 @@ RUN apt-get -qq update
 
 #install rsyslog
 RUN apt-get install -y rsyslog
+RUN systemctl enable rsyslog.service
 
-RUN systemctl enable rsyslog.service && service rsyslog restart && apt-get install -y maas
+#RUN systemctl enable rsyslog.service && service rsyslog restart && apt-get install -y maas
 #RUN apt-get install -y maas-dns
 #RUN apt-get install -y maas-region-controller
 #RUN apt-get install -y maas-rack-controller
