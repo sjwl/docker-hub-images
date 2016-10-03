@@ -12,6 +12,5 @@ RUN systemctl enable rsyslog.service
 #install maas
 RUN systemctl enable rsyslog.service && \
     service rsyslog restart && \
-    apt-get install -y maas
-
-RUN maas createadmin --username=root --password=welcome1 --email=foo@foo.com
+    apt-get install -y maas && \
+    maas createadmin --username=root --password=welcome1 --email=foo@foo.com
