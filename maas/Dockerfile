@@ -5,10 +5,10 @@ ENV container docker
 RUN apt-get -qq update
 
 #install rsyslog
-RUN apt-get install -y rsyslog && \
-    systemctl enable rsyslog.service && \
-    systemctl start rsyslog.service
+RUN apt-get install -y rsyslog
 
-#install maas
-RUN apt-get install -y maas && \
-    maas createadmin --username=root --password=welcome1 --email=foo@foo.com
+RUN systemctl enable rsyslog.service && service rsyslog restart && apt-get install -y maas
+#RUN apt-get install -y maas-dns
+#RUN apt-get install -y maas-region-controller
+#RUN apt-get install -y maas-rack-controller
+#    maas createadmin --username=root --password=welcome1 --email=foo@foo.com
