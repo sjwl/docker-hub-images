@@ -19,7 +19,7 @@ RUN yum install -y \
 RUN export PACKER_VERSION=0.10.1 && \
     export VAGRANT_VERSION=1.8.5 && \
     export OTTO_VERSION=0.2.0 && \
-    export TERRAFORM_VERSION=0.7.2 && \
+    export TERRAFORM_VERSION=0.7.8 && \
     export ATLAS_CLI_VERSION=0.2.0 && \
     wget --directory-prefix=/tmp https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip && \
     unzip /tmp/packer_${PACKER_VERSION}_linux_amd64.zip -d /usr/local/bin && \
