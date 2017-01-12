@@ -25,7 +25,7 @@ RUN export PACKER_VERSION=0.10.1 && \
     rm -rf /tmp/*
 
 # install Virtualbox (Example version: 5.0.14_105127_el7-1)
-RUN export VIRTUALBOX_VERSION=latest && \
+RUN export VIRTUALBOX_VERSION=5.1.8_111374_el7-1.x86_64 && \
     mkdir -p /opt/virtualbox && \
     cd /etc/yum.repos.d/ && \
     wget http://download.virtualbox.org/virtualbox/rpm/el/virtualbox.repo && \
