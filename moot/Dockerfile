@@ -61,10 +61,6 @@ RUN chef gem install kitchen-docker
 
 # cleanup
 RUN set -x \
-        && yum autoremove -y \
-             tar \
-             unzip \
-             wget \
         && yum clean all \
         && rm -rf /var/cache/yum/*
 
