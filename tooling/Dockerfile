@@ -1,5 +1,6 @@
 FROM hashicorp/terraform:0.11.1 AS terraform
 WORKDIR $GOPATH/src/github.com/mcuadros/terraform-provider-helm
+RUN apk add --no-cache make
 RUN git clone https://github.com/mcuadros/terraform-provider-helm.git ./ && \
 make build
 RUN cp $GOPATH/bin/terraform* /
